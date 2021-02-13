@@ -11,6 +11,6 @@ app.get('/pushNodesData', (req, res) => {
   console.log("data recieved")
 })
 
-app.listen(port, () => {
+app.listen(process.env.PORT||port, () => {
   console.log(`Example app listening at http://localhost:${port}`)
 })
