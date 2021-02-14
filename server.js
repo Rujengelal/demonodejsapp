@@ -10,7 +10,12 @@ app.get('/pushNodesData', (req, res) => {
   res.send('Data recieved')
   console.log("data recieved")
 })
-
+app.get('/formatData', (req, res) => {
+  console.log(req.query.data)
+  let data=JSON.parse(req.query.data)
+  res.send(`${data['co2']}:${data['humidity']}:${data['light']}:${data['moisture']}:${data['temperature']}`)
+ 
+})
 app.listen(process.env.PORT||port, () => {
   console.log(`Example app listening at http://localhost:${port}`)
 })
