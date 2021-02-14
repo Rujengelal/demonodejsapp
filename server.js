@@ -4,7 +4,7 @@ const app = express()
 const port = 3000
 app.use(cors())
 app.get('/', (req, res) => {
-  res.send('Hello World!')
+  res.send({"co2":450,"light":50})
 })
 app.get('/pushNodesData', (req, res) => {
   res.send('Data recieved')
